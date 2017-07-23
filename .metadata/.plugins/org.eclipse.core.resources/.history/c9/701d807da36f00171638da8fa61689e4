@@ -1,0 +1,13 @@
+package com.example.services;
+
+import com.example.repositories.PostRepository;
+
+public class PostService {
+	
+	private PostRepository postRepository;
+	
+	public List<Post> getAllPosts() {
+		
+	}
+
+}

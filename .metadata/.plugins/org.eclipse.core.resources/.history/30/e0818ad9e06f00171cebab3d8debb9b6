@@ -1,0 +1,22 @@
+package com.example.Blog.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.Blog.services.PostService;
+
+@RestController
+public class BlogController {
+	
+	@Autowired
+	private PostService postService;
+	
+	
+	
+	@RequestMapping
+	public String index() {
+		return "index";
+	}
+
+}
