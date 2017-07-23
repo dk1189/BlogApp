@@ -1,8 +1,13 @@
 package com.example.Blog.controller;
 
+import java.text.Format;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +17,11 @@ import com.example.Blog.services.PostService;
 
 @RestController
 public class BlogController {
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss.SSS");
+	Date dt = new Date();
+	String dateFormated;
+	Date dt2 = new Date();
 	
 	@Autowired
 	private PostService postService;
@@ -27,8 +37,18 @@ public class BlogController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/post")
-	public void publishPost(Post post) {
-		
+	public void publishPost(@RequestBody Post post) {
+		if (post.getCreationDate() == null)
+			dt = post.getCreationDate();
+			dateFormated = sdf.format(dt);
+			try {
+				dt2 = sdf.parse(dateFormated);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			post.setCreationDate(dt2);
+		postService.insert(post);
 	}
 
 }

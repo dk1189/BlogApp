@@ -1,0 +1,17 @@
+package com.example.services;
+
+import java.util.List;
+
+import com.example.entities.Post;
+import com.example.repositories.PostRepository;
+
+public class PostService {
+	
+	private PostRepository postRepository;
+	
+	public List<Post> getAllPosts() {
+		return postRepository.findAll();
+		
+	}
+
+}

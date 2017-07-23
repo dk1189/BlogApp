@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1500021276096_2" label="demo-spring-boot" name="demo-spring-boot">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/demo" type="4"/>
+<item elementID="=demo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1500730268267_4" label="noticeCreation" name="noticeCreation">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/noticeCreation" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/notices-data" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/notices-domain" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/notices-web" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1500810221510_5" label="BlogApp" name="BlogApp">
+<item elementID="=BlogApp" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1500021253690_0" label="Window Working Set" name="Aggregate for window 1500021253690"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1500239671147_3" label="Window Working Set" name="Aggregate for window 1500239671138"/>
+</workingSetManager>

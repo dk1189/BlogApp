@@ -1,0 +1,38 @@
+package com.example.Blog.controller;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.Blog.entities.Post;
+import com.example.Blog.services.PostService;
+
+@RestController
+public class BlogController {
+	
+	@Autowired
+	private PostService postService;
+	
+	@RequestMapping
+	public String index() {
+		return "index";
+	}
+	
+	@RequestMapping("/posts")
+	public List<Post> posts() {
+		return postService.getAllPosts();
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/post")
+	public void publishPost(@RequestBody Post post) {
+		if (post.getCreationDate() == null)
+			post.setCreationDate(new Date());
+		postService.insert(post);
+	}
+
+}
